@@ -86,4 +86,4 @@ class PersonInfo {
                 "\nCity : " + this.city + " , " +"Sate : " + this.state + " , " +"ZIP : " + this.zip +
                 "\nPhone Number : " + this.phoneNumber + " \nEmail : " + this.email + "]\n";
     }
-} 
+}

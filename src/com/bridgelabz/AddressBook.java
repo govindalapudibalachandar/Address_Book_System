@@ -155,6 +155,18 @@ public class AddressBook {
     public static List<PersonInfo> sortBy(Function<? super PersonInfo, ? extends String> key) {
         return personInfo.stream().sorted(Comparator.comparing(key)).collect(Collectors.toList());
     }
+    //Method to Sort Entries by City
+    public static void sortByCity(){
+        AddressBook.sortBy(PersonInfo::getCity).forEach(System.out::println);
+    }
+    //Method to Sort Entries by State
+    public static void sortByState(){
+        AddressBook.sortBy(PersonInfo::getState).forEach(System.out::println);
+    }
+    //Method to Sort Entries by Zip
+    public static void sortByZip(){
+        AddressBook.sortBy(PersonInfo::getZip).forEach(System.out::println);
+    }
     //Method to diplay Menu Choices to User
     public static void menu() {
         String menuOption;
@@ -213,4 +225,4 @@ public class AddressBook {
         System.out.println("Welcome To AddressBook");
         menu();
     }
-} 
+}
