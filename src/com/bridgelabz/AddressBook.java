@@ -42,4 +42,18 @@ public class AddressBook {
         System.out.println(c);
     }
 
+    // Method to Edit Contacts
+    public void Edit() {
+        System.out.println("Enter First Name of a Person to Edit:  ");
+        String editName = sc.nextLine();
+
+        if (editName.equalsIgnoreCase(c.firstName)) {
+            Add();
+        } else {
+            System.out.println("Invalid First Name! ");
+            System.out.println("Please Enter Valid First Name: ");
+            Edit();
+        }
+    }
 }
+

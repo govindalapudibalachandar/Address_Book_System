@@ -1,28 +1,25 @@
 package com.bridgelabz;
-
-import java.util.Scanner;
-
 import java.util.Scanner;
 
 public class AddressBookMain {
     // main method
     public static void main(String[] args) {
         System.out.println("Welcome to Address Book System ! ");
-        //Create an Object
-        Contacts obj = new Contacts();
-        obj.setFirstName("Bala");
-        obj.setLastName("Chandar");
-        obj.setCity("MTM");
-        obj.setState("AP");
-        obj.setPin("521100");
-        obj.setMobileNo("9441520386");
-        obj.setEmail("Bala@gmail.com");
-        System.out.println("Contact details: "+obj.getFirstName()+" "+ obj.getLastName()+" "+ obj.getCity()+" "+ obj.getState()+" "+ obj.getPin()+" "+ obj.getMobileNo()+" "+ obj.getEmail());
-        System.out.println("Thank for Using Address book");
+        Scanner sc = new Scanner(System.in);
+        AddressBook addressBook = new AddressBook();
+        addressBook.Add();
 
+        //Asking Edit Option to User
+        System.out.println("Do You Want To Edit ContactS?? ");
+        System.out.println("Enter Y/y to edit ");
+        String op = sc.nextLine();
+
+        if(op.equals("y") || op.equals("Y")){
+            System.out.println("You have Entered following data");
+            addressBook.Edit();
+            System.out.println("Thank for Using Address book");
+        } else {
+            System.out.println("Thanks for using! ");
+        }
     }
 }
-
-
-	
-
