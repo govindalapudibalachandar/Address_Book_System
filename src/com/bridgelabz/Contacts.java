@@ -1,7 +1,7 @@
 package com.bridgelabz;
 
 public class Contacts {
-    // instantce variable
+    // instance variable
     String firstName;
     String lastName;
     String city;
@@ -9,10 +9,8 @@ public class Contacts {
     String pinCode;
     String mobileNo;
     String email;
-
-    // Added default constructor for contact string
-    public Contacts() {
-
+    //Constructor
+    public Contacts(String firstName, String lastName, String city, String state, String pinCode, String mobileNo, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.city = city;
@@ -21,8 +19,11 @@ public class Contacts {
         this.mobileNo = mobileNo;
         this.email = email;
     }
+    //Getter and Setter
 
-// generated getter setter method
+    public String getFirstName() {
+        return firstName;
+    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -52,11 +53,11 @@ public class Contacts {
         this.state = state;
     }
 
-    public String getPin() {
+    public String getPinCode() {
         return pinCode;
     }
 
-    public void setPin(String pinCode) {
+    public void setPinCode(String pinCode) {
         this.pinCode = pinCode;
     }
 
@@ -76,7 +77,7 @@ public class Contacts {
         this.email = email;
     }
 
-    @Override
+    //toString Method
     public String toString() {
         return "AddressBook{" +
                 "firstName='" + firstName + '\'' +
@@ -87,5 +88,8 @@ public class Contacts {
                 ", mobileNo='" + mobileNo + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+    }
+    public static void main(String[] args) {
+        System.out.println("Welcome to Address Book...");
     }
 }
