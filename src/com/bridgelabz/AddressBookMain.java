@@ -9,17 +9,18 @@ public class AddressBookMain {
         AddressBook addressBook = new AddressBook();
         addressBook.Add();
 
-        //Asking Edit Option to User
-        System.out.println("Do You Want To Edit ContactS?? ");
-        System.out.println("Enter Y/y to edit ");
-        String op = sc.nextLine();
-
-        if(op.equals("y") || op.equals("Y")){
-            System.out.println("You have Entered following data");
-            addressBook.Edit();
-            System.out.println("Thank for Using Address book");
-        } else {
-            System.out.println("Thanks for using! ");
+        //Asking Edit or Delete Option to User
+        System.out.println("Enter 1 . Edit \n 2 . Delete \n press any key for exit");
+        int op = sc.nextInt();
+        sc.nextLine();
+        switch (op) {
+            case 1:
+                addressBook.Edit();
+                System.out.println("Thank for Using Address book");
+                break;
+            case 2:
+                addressBook.Delete();
+                break;
         }
     }
 }

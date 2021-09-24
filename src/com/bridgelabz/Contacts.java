@@ -6,7 +6,7 @@ public class Contacts {
     String lastName;
     String city;
     String state;
-    String pin;
+    String pinCode;
     String mobileNo;
     String email;
 
@@ -17,7 +17,7 @@ public class Contacts {
         this.lastName = lastName;
         this.city = city;
         this.state = state;
-        this.pin = pin;
+        this.pinCode = pinCode;
         this.mobileNo = mobileNo;
         this.email = email;
     }
@@ -53,11 +53,11 @@ public class Contacts {
     }
 
     public String getPin() {
-        return pin;
+        return pinCode;
     }
 
-    public void setPin(String pin) {
-        this.pin = pin;
+    public void setPin(String pinCode) {
+        this.pinCode = pinCode;
     }
 
     public String getMobileNo() {
@@ -83,7 +83,7 @@ public class Contacts {
                 ", lastName='" + lastName + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
-                ", pin='" + pin + '\'' +
+                ", pin='" + pinCode + '\'' +
                 ", mobileNo='" + mobileNo + '\'' +
                 ", email='" + email + '\'' +
                 '}';

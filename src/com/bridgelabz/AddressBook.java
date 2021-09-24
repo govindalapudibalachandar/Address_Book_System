@@ -19,7 +19,7 @@ public class AddressBook {
         String cityName = sc.nextLine();
 
         System.out.println("Enter State name : ");
-        String stateName = sc.nextLine();
+        String statetName = sc.nextLine();
 
         System.out.println("Enter pin number : ");
         String pinNumber = sc.nextLine();
@@ -34,14 +34,13 @@ public class AddressBook {
         c.setFirstName(firstName);
         c.setLastName(LastName);
         c.setCity(cityName);
-        c.setState(stateName);
+        c.setState(statetName);
         c.setPin(pinNumber);
         c.setMobileNo(mobileNumber);
         c.setEmail(EmailID);
 
         System.out.println(c);
     }
-
     // Method to Edit Contacts
     public void Edit() {
         System.out.println("Enter First Name of a Person to Edit:  ");
@@ -55,5 +54,17 @@ public class AddressBook {
             Edit();
         }
     }
-}
+    // method to delete contact
+    public void Delete() {
+        System.out.println("Enter First Name of a Person to Delete:  ");
+        String editName = sc.nextLine();
 
+        if (editName.equalsIgnoreCase(c.firstName)) {
+            c = null;
+        } else {
+            System.out.println("Invalid First Name! ");
+            System.out.println("Please Enter Valid First Name: ");
+            Delete();
+        }
+    }
+}
